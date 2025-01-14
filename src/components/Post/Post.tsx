@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { IPost } from "../../@types";
 import "../App/App.scss";
 
@@ -12,9 +13,9 @@ function Post({ post }: PostProps) {
 			<img src={post.thumbnail} alt="" />
 			<h2 className="post-title">{post.title}</h2>
 			<div className="post-difficulty">Difficulté: {post.difficulty}</div>
-			<a href="#" className="see-post">
+			<Link to={`recipe/${post.slug}`} className="see-post">
 				Voir la recette
-			</a>
+			</Link>
 		</article>
 	);
 }

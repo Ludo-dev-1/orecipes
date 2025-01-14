@@ -1,19 +1,18 @@
 import "../Aside/Aside.scss";
-import recipes from "../../data/recipes";
 
-function Aside() {
+function Aside({ recipeFetch }) {
 	return (
 		<aside className="menu" id="aside">
 			<nav>
-				{recipes.map((recipes) => (
+				{recipeFetch.map((recipes) => (
 					<a
 						/* className={
 							filterValue.toUpperCase() === recipes.label.toUpperCase()
 						} */
-						href={recipes.route}
-						key={recipes.label}
+						href={recipes.slug}
+						key={recipes.title}
 					>
-						{recipes.label}
+						{recipes.title}
 					</a>
 				))}
 			</nav>

@@ -8,10 +8,12 @@ import "./App.scss";
 
 import { useEffect, useState } from "react";
 import { IPost } from "../../@types";
+import { Route, Routes, useParams } from "react-router";
+import SingleRecipe from "../SingleRecipe/SingleRecipe";
 
 function App() {
 	//STATE pour afficher les recettes
-	const [recipes, setRecipes] = useState<null | IPost[]>([]);
+	const [recipes, setRecipes] = useState<IPost[]>([]);
 
 	useEffect(() => {
 		const fetchRecipes = async () => {
@@ -29,8 +31,16 @@ function App() {
 	return (
 		<div className="app">
 			<Header />
-			<Aside />
-			<Posts posts={recipes} />
+			<Aside recipeFetch={recipes} />
+
+			<Routes>
+				<Route path="/" element={<Posts posts={recipes} />} />
+
+				<Route
+					path="recipe/:slug"
+					element={<SingleRecipe recipes={recipes} />}
+				/>
+			</Routes>
 		</div>
 	);
 }
