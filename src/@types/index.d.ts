@@ -6,10 +6,15 @@ export interface IPost {
 	author: string;
 	difficulty: string;
 	description: string;
-	instructions: string;
+	instructions: string[];
+	ingredients: IIngredient[];
 }
-export interface IIngredients {
-	ingredients: [id: number, quantity: number, unit: string, name: string];
+
+export interface IIngredient {
+	name: string;
+	id: number;
+	quantity: number;
+	unit: string;
 }
 
 export interface IRecipe {

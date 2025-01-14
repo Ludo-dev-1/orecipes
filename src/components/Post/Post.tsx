@@ -9,7 +9,7 @@ interface PostProps {
 function Post({ post }: PostProps) {
 	return (
 		<article className="post">
-			<img src="" alt="" />
+			<img src={post.thumbnail} alt="" />
 			<h2 className="post-title">{post.title}</h2>
 			<div className="post-difficulty">Difficulté: {post.difficulty}</div>
 			<a href="#" className="see-post">
