@@ -1,0 +1,15 @@
+body{
+display: flex;
+flex-flow: row
+}
+
+main{
+    display: grid;
+
+}
+
+.post{
+    border: 1px solid black;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
