@@ -2,11 +2,12 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-    width: 100%;
+    width: 50%;
+    padding-bottom: 2rem;
   
     .mailConnection{
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
     }
     
     img{
