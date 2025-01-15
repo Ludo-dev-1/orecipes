@@ -1,19 +1,12 @@
+import { IPost } from "../../@types";
 import "../Aside/Aside.scss";
 
-function Aside({ recipeFetch }) {
+function Aside({ recipeFetch }: { recipeFetch: IPost[] }) {
 	return (
 		<aside className="menu" id="aside">
 			<nav>
 				{recipeFetch.map((recipes) => (
-					<a
-						/* className={
-							filterValue.toUpperCase() === recipes.label.toUpperCase()
-						} */
-						href={recipes.slug}
-						key={recipes.title}
-					>
-						{recipes.title}
-					</a>
+					<li key={recipes.title}>{recipes.title}</li>
 				))}
 			</nav>
 		</aside>

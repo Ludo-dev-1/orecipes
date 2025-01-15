@@ -1,11 +1,9 @@
-body{
+.app{
 display: flex;
-flex-flow: row
+
 }
 
-
-.post{
-    border: 1px solid black;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
+.rightbloc{
+    width: 75%;
+    margin-left: 2rem;
 }

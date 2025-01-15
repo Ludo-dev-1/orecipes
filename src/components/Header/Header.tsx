@@ -1,8 +1,9 @@
+import { Button } from "semantic-ui-react";
 import "./Header.scss";
 
 function Header() {
 	return (
-		<header className="connections">
+		<header className="header">
 			<img src="front_docs/logo.png" alt="logo" />
 			<form
 				className="mailConnection"
@@ -27,7 +28,9 @@ function Header() {
 					placeholder="Mot de passe"
 					name="Mdp"
 				/>
-				<button type="submit">OK</button>
+				<Button primary type="submit">
+					OK
+				</Button>
 			</form>
 		</header>
 	);

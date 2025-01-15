@@ -1,11 +1,7 @@
 import { useParams } from "react-router";
 import { IPost } from "../../@types";
 
-function SingleRecipe({
-	recipes,
-}: {
-	recipes: IPost[];
-}) {
+function SingleRecipe({ recipes }: { recipes: IPost[] }) {
 	const params = useParams();
 	const urlSlug = params.slug;
 
@@ -21,11 +17,7 @@ function SingleRecipe({
 	return (
 		<div>
 			<h1> {recipeToDisplay.title}</h1>
-			{/* <ul>
-				{recipeToDisplay.map((recipe) => {
-					<li>{recipe.ingredients}</li>;
-				})}
-			</ul> */}
+
 			<p> </p>
 		</div>
 	);

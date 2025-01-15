@@ -7,7 +7,7 @@ interface PostProps {
 }
 
 // rôle : afficher un article
-function Post({ post }: PostProps) {
+function Recipe({ post }: PostProps) {
 	return (
 		<article className="post">
 			<img src={post.thumbnail} alt="" />
@@ -20,4 +20,4 @@ function Post({ post }: PostProps) {
 	);
 }
 
-export default Post;
+export default Recipe;
