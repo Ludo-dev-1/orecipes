@@ -1,5 +1,6 @@
 import { Button } from "semantic-ui-react";
 import "./Header.scss";
+import logo from "../../../public/logo.png";
 
 import axios from "axios";
 
@@ -32,7 +33,7 @@ function Header() {
 
 	return (
 		<header className="header">
-			<img src="public\logo.png" alt="logo" />
+			<img src={logo} alt={logo} />
 			<form
 				className="mailConnection"
 				onSubmit={(eventSubmit) => {
