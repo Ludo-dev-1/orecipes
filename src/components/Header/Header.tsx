@@ -32,7 +32,7 @@ function Header() {
 
 	return (
 		<header className="header">
-			<img src="front_docs/logo.png" alt="logo" />
+			<img src="src\assets\logo.png" alt="logo" />
 			<form
 				className="mailConnection"
 				onSubmit={(eventSubmit) => {
